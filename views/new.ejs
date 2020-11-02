@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+
+  <body>
+    <h1>New recipe page</h1>
+    <!--  NOTE: action will be the route, method will be the HTTP verb-->
+    <form action="/recipes" method="POST">
+        recipe_id: <input type="text" name="recipe_id"/><br/>
+        Name: <input type="text" name="Name"/><br/>
+        Calorie: <input type="text" name="Calorie"/><br/>
+        Fat: <input type="text" name="Fat"/><br/>
+        Carb: <input type="text" name="Carb"/><br/>
+        Protein: <input type="text" name="Protein"/><br/>
+      <input type="submit" name="" value="Create recipe" />
+    </form>
+  </body>
+</html>

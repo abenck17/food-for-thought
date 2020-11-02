@@ -28,17 +28,13 @@ router.get("/:index/edit", function (req, res) {
     "edit.ejs", //render views/edit.ejs
     {
       //pass in an object that contains
-      recipe
-: recipes[req.params.index], //the recipe object
+      recipe: recipes[req.params.index], //the recipe object
       index: req.params.index, //... and its index in the array
     }
   );
 });
 
 router.put("/:index", (req, res) => {
-  //:index is the index of our recipes array that we want to change
-  req.body.readyToEat = req.body.readyToEat === "on" ? true : false;
-
   recipes[req.params.index] = req.body; //in our recipes array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
   res.redirect("/recipes"); //redirect to the index page
 });
