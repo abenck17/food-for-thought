@@ -5,6 +5,7 @@ const methodOverride = require('method-override');//include the method-override 
 app.use(express.static("public"));
 
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: true }))
 
 app.use("/recipes", require("./controllers/recipesController.js"));
 app.use("/users", require("./controllers/usersController.js"));
