@@ -3,6 +3,7 @@ const app = express();//app is an object
 const methodOverride = require('method-override');//include the method-override package
 
 app.use(methodOverride('_method'));
+app.use("/users", require("./controllers/usersController.js"));
 
 const users = require('./models/users.js'); //NOTE: it must start with ./ if it's just a file, not an NPM package
 
@@ -33,7 +34,7 @@ app.get('/users/:index/edit', function(req, res){
 
 // edit put 
 app.put('/users/:index', (req, res) => { //:index is the index of our users array that we want to change
-    
+
 	users[req.params.index] = req.body; //in our users array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
 	res.redirect('/users'); //redirect to the index page
 });
