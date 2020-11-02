@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Edit recipe Page</h1>
-        <form action="/recipes/<%=index%>?_method=PUT" method="POST">
+        <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
 		<!--  NOTE: the form is pre-populated with values for the server-->
 		
         Name: <input type="text" name="Name" value="<%=recipe.Name%>"/><br/>

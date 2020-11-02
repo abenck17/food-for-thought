@@ -1,47 +1,62 @@
 const express = require("express");
 const router = express.Router();
 
-const recipes = require("../models/recipes.js");
+const Recipe = require("../models").Recipe;
 
+//index
 router.get("/", (req, res) => {
-  res.render("index.ejs", {
-    recipes: recipes,
+  Recipe.findAll().then((recipes) => {
+    res.render("index.ejs", {
+      recipes: recipes,
+    });
   });
 });
 
-//put this above your show.ejs file
+//new recipe
 router.get("/new", (req, res) => {
   res.render("new.ejs");
 });
 
+//create a recipe post route
 router.post("/", (req, res) => {
-  recipes.push(req.body);
-  res.redirect("/recipes");
+  Recipe.create(req.body).then((newRecipe) => {
+    res.redirect("/recipes");
+  });
 });
 
-router.get("/:index", (req, res) => {
-  res.render("show.ejs", { recipe: recipes[req.params.index] });
+//show.ejs file
+router.get("/:id", (req, res) => {
+  Recipe.findByPk(req.params.id).then((recipe) => {
+    res.render("show.ejs", {
+      recipe: recipe,
+    });
+  });
 });
 
-router.get("/:index/edit", function (req, res) {
-  res.render(
-    "edit.ejs", //render views/edit.ejs
-    {
-      //pass in an object that contains
-      recipe: recipes[req.params.index], //the recipe object
-      index: req.params.index, //... and its index in the array
-    }
-  );
+//edit route
+router.get("/:id/edit", function (req, res) {
+  Recipe.findByPk(req.params.id).then((recipe) => {
+    res.render("edit.ejs", {
+      recipe: recipe,
+    });
+  });
 });
 
-router.put("/:index", (req, res) => {
-  recipes[req.params.index] = req.body; //in our recipes array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
-  res.redirect("/recipes"); //redirect to the index page
+//update route
+router.put("/:id", (req, res) => {
+  Recipe.update(req.body, {
+    where: { id: req.params.id },
+    returning: true,
+  }).then((recipe) => {
+    res.redirect("/recipes");
+  });
 });
 
-router.delete("/:index", (req, res) => {
-  recipes.splice(req.params.index, 1); //remove the item from the array
-  res.redirect("/recipes"); //redirect back to index route
+//delete route
+router.delete("/:id", (req, res) => {
+  Recipe.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/recipes");
+  });
 });
 
 module.exports = router;

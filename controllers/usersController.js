@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const users = require("../models/users");
+const User = require("../models").User;
 
 // INDEX
 router.get("/", (req, res) => {
-  console.log(users);
-  res.render("users/index.ejs", {
-    users: users,
+  User.findAll().then((users) => {
+    console.log(users);
+    res.render("users/index.ejs", {
+      users: users,
+    });
   });
 });
 
@@ -23,40 +25,53 @@ router.get("/login", (req, res) => {
 
 // POST LOGIN
 router.post("/login", (req, res) => {
-  console.log(req.body);
-  let index = users.findIndex(
-    (user) =>
-      user.username === req.body.username && user.password === req.body.password
-  );
-
-  res.redirect(`/users/profile/${index}`);
+  User.findOne({
+    where: {
+      Username: req.body.username,
+      Password: req.body.password,
+    },
+  }).then((foundUser) => {
+    res.redirect(`/users/profile/${foundUser.id}`);
+  });
 });
 
 // POST - CREATE NEW USER FROM SIGNUP
 router.post("/", (req, res) => {
-  console.log(req.body);
-  users.push(req.body);
-  res.redirect(`/users/profile/${users.length - 1}`);
+  User.create(req.body).then((newUser) => {
+    res.redirect(`/users/profile/${newUser.id}`);
+  });
 });
 
 // GET USERS PROFILE
-router.get("/profile/:index", (req, res) => {
-  res.render("users/profile.ejs", {
-    user: users[req.params.index],
-    index: req.params.index,
+router.get("/profile/:id", (req, res) => {
+  User.findByPk(req.params.id).then((userProfile) => {
+    res.render("users/profile.ejs", {
+      user: userProfile,
+    });
   });
 });
 
 // EDIT PROFILE
-router.put("/profile/:index", (req, res) => {
-  users[req.params.index] = req.body;
-  res.redirect(`/users/profile/${req.params.index}`);
+router.put("/profile/:id", (req, res) => {
+  User.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+    returning: true,
+  }).then((updatedUser) => {
+    res.redirect(`/users/profile/${req.params.id}`);
+  });
 });
 
 // DELETE USER
-router.delete("/:index", (req, res) => {
-  users.splice(req.params.index, 1); //remove the item from the array
-  res.redirect("/users"); //redirect back to index route
+router.delete("/:id", (req, res) => {
+  User.destroy({
+    where: {
+      id: req.params.id,
+    },
+  }).then(() => {
+    res.redirect("/users");
+  });
 });
 
 module.exports = router;
