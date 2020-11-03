@@ -6,21 +6,21 @@ module.exports = {
       "Recipes",
       [
         {
-          Name: 'Chicken and Rice', 
-          Calorie: 580, 
-          Fat: 25, 
-          Carb: 80, 
-          Protein: 65,
+          name: 'chicken and Rice', 
+          calorie: 580, 
+          fat: 25, 
+          carb: 80, 
+          protein: 65,
           userId: 1, 
           createdAt: new Date(),
           updatedAt: new Date(),
       },
       {
-          Name: 'Beef and Broccoli', 
-          Calorie: 720, 
-          Fat: 38, 
-          Carb: 50, 
-          Protein: 70,
+          name: 'Beef and Broccoli', 
+          calorie: 720, 
+          fat: 38, 
+          carb: 50, 
+          protein: 70,
           userId: 2, 
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -35,7 +35,7 @@ module.exports = {
      * Add commands to revert seed here.
      *
      * Example:
-     * await queryInterface.bulkDelete('People', null, {});
+     * await queryInterface.bulkDelete('people', null, {});
      */
   }
 };

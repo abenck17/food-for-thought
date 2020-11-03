@@ -10,11 +10,11 @@
         <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
 		<!--  NOTE: the form is pre-populated with values for the server-->
 		
-        Name: <input type="text" name="Name" value="<%=recipe.Name%>"/><br/>
-        Calorie: <input type="text" name="Calorie" value="<%=recipe.Calorie%>"/><br/>
-        Fat: <input type="number" name="Fat" value="<%=recipe.Fat%>"/><br/>
-        Carb: <input type="number" name="Carb" value="<%=recipe.Carb%>"/><br/>
-        Protein: <input type="number" name="Protein" value="<%=recipe.Protein%>"/><br/>
+        Name: <input type="text" name="name" value="<%=recipe.name%>"/><br/>
+        Calorie: <input type="text" name="calorie" value="<%=recipe.calorie%>"/><br/>
+        Fat: <input type="number" name="fat" value="<%=recipe.fat%>"/><br/>
+        Carb: <input type="number" name="carb" value="<%=recipe.carb%>"/><br/>
+        Protein: <input type="number" name="protein" value="<%=recipe.protein%>"/><br/>
 		<br/>
 		<input type="submit" name="" value="Submit Changes"/>
         </form>

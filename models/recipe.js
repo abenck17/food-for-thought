@@ -14,11 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Recipe.init({
-    Name: DataTypes.STRING,
-    Calorie: DataTypes.INTEGER,
-    Fat: DataTypes.INTEGER,
-    Carb: DataTypes.INTEGER,
-    Protein: DataTypes.INTEGER, 
+    name: DataTypes.STRING,
+    calorie: DataTypes.INTEGER,
+    fat: DataTypes.INTEGER,
+    carb: DataTypes.INTEGER,
+    protein: DataTypes.INTEGER, 
     userId: DataTypes.INTEGER,
   }, {
     sequelize,

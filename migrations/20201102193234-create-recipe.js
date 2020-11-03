@@ -8,19 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Name: {
+      name: {
         type: Sequelize.STRING
       },
-      Calorie: {
+      calorie: {
         type: Sequelize.INTEGER
       },
-      Fat: {
+      fat: {
         type: Sequelize.INTEGER
       },
-      Carb: {
+      carb: {
         type: Sequelize.INTEGER
       },
-      Protein: {
+      protein: {
         type: Sequelize.INTEGER
       },
       createdAt: {
