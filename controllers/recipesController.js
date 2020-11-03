@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Recipe = require("../models").Recipe;
+const User = require('../models').User;
 
 //index
 router.get("/", (req, res) => {
@@ -26,7 +27,9 @@ router.post("/", (req, res) => {
 
 //show.ejs file
 router.get("/:id", (req, res) => {
-  Recipe.findByPk(req.params.id).then((recipe) => {
+  Recipe.findByPk(req.params.id, {
+    include : [User]
+  }).then((recipe) => {
     res.render("show.ejs", {
       recipe: recipe,
     });

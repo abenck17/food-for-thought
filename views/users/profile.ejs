@@ -10,7 +10,7 @@
       Name: <input type="text" name="Name" value="<%=user.Name%>" /><br />
       <br />
       Username:
-      <input type="text" name="Username" value="<%=user.Username%>" />
+      <input type="text" name="Username" value="<%=user.Username%>" /><br />
       <br />
       Password:
       <input type="text" name="Password" value="<%=user.Password%>" /><br />
@@ -30,6 +30,16 @@
     <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
       <input type="submit" value="Delete User" />
     </form>
+
+    <h3>Recipes added by you:</h3>
+    <% for (let i = 0; i < user.Recipes.length; i++){ %>
+            <li>
+               <a href="/recipes/<%=user.Recipes[i].id%>"><%=user.Recipes[i].Name%></a>
+            </li>
+            <br>
+    <% } %>
+
+    <br><br>
 
     <br /><br />
     <a href="/recipes">View All Recipes</a>
