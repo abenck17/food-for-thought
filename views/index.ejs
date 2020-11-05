@@ -4,35 +4,36 @@
         <meta charset="utf-8">
         <title>All Recipes</title>
         <link rel="stylesheet" href="/css/app2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <div class="flex">
-        <h1>All Recipes</h1>
-    
-        <ul class="recipeList">
-            <% for(let i=0; i<recipes.length; i++) { %>
-                <li>
-                    <nav class="singleRecipe">
-                        <a href="<%=recipes[i].link%>"><%=recipes[i].name%></a>
-                        <a>Calorie (<%=recipes[i].calorie%>)<br/></a>
-                        <a>Fat (<%=recipes[i].fat%>g)<br/></a>
-                        <a>Carb (<%=recipes[i].carb%>g)<br/></a>
-                        <a>Protein (<%=recipes[i].protein%>g)<br/></a>
-                    </nav>
-                </br>
-                </br>
-                    <!-- Add edit link here  -->
-			        <a href="/recipes/<%=recipes[i].id %>/edit"><button type="button">Edit</button></a>
-                </br>
-                </br>
-                    <!--  ADD DELETE FORM HERE-->
-			        <form action="/recipes/<%=recipes[i].id %>?_method=DELETE" method="POST">
-				        <input type="submit" value="DELETE"/>
-                    </form>
-                </br>
-                </li>
-            <% } %>
-        </ul>
-    </div>
+    <h1>All Recipes</h1>
+
+            <ul class="recipeList">
+                <% for(let i=0; i<recipes.length; i++) { %>
+                    <li class="groupRecipe">
+                        <nav class="singleRecipe">
+                            <a href="<%=recipes[i].link%>" style="font-weight: bold;font-size: 25px;color: bisque;"><%=recipes[i].name%><br/></a>
+                            <a>Calorie (<%=recipes[i].calorie%>)<br/></a>
+                            <a>Fat (<%=recipes[i].fat%>g)<br/></a>
+                            <a>Carb (<%=recipes[i].carb%>g)<br/></a>
+                            <a>Protein (<%=recipes[i].protein%>g)<br/></a>
+                        </nav>
+                    </br>
+                    </br>
+                        <!-- Add edit link here  -->
+                        <a href="/recipes/<%=recipes[i].id %>/edit"><button type="button">Edit</button></a>
+                    </br>
+                    </br>
+                        <!--  ADD DELETE FORM HERE-->
+                        <form action="/recipes/<%=recipes[i].id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="DELETE"/>
+                        </form>
+                    </br>
+                    </li>
+                <% } %>
+            </ul>
     </body>
+    <button class="btn" onclick="document.location='/'"><i class="fa fa-home"></i></button>
 </html>
