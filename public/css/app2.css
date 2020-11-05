@@ -1,0 +1,30 @@
+body {
+    background-color: lightyellow;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 10%;
+  }
+
+  h1 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .recipeList {
+      grid-column: 2;
+      grid-row: 2;
+  }
+
+  .flex {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .singleRecipe {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }

@@ -1,0 +1,107 @@
+html {
+	height: 100%;
+	width: 100%; 
+	resize: both;
+  overflow: hidden;
+	scroll: none;
+}
+
+body {
+  background-image: url("https://www.telegraph.co.uk/content/dam/health-fitness/2017/10/31/138591023_E2B_Health-Food_trans_NvBQzQNjv4BqTh3H5BemKyhXFKdcxJGxV53XVdg1rRzimPdm_Jg3Voo.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 100vw;
+  height: 100vh;
+  overflow:auto;
+  opacity: 0.7;
+  /* display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 5% 25% 65% 5%; */
+  
+}
+
+h1 {
+  /* grid-column: 2;
+  grid-row: 2; */
+  position: absolute;
+  font-size: 125px;
+  margin-top: 0px; 
+  font-family: 'Amatic SC', cursive;
+  left: 50%;
+  color: slategray;
+  text-shadow: 2px 2px 0px white, 3px 3px 0px #707070;
+}
+
+.headerCredentials {
+  position: absolute;
+  width: 30%; 
+  top: 65%;
+  left: 65%; 
+}
+
+.flexHeader {
+  display: flex; 
+  justify-content: space-around;
+  background:rgb(0, 51, 0);
+  height: 50px; 
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: block;
+  background:rgb(0, 51, 0);
+  color: white; 
+  font-size: 20px;
+  transition: 0.2s linear;
+  width: 33%;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover { 
+  background-color: rgb(0, 77, 0);
+  border: lightgray solid 1px; 
+}
+
+.signUpForm {
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px; 
+  color: white;
+}
+
+.logInForm {
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px; 
+  color: white;
+}
+
+/* Style buttons */
+.btn {
+  background-color: rgb(0, 51, 0);; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  height: 8%;
+  width: 4%;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(0, 77, 0);
+  border: lightgray solid 1px;
+}
+
+
+

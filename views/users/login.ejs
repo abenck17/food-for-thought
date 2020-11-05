@@ -4,17 +4,21 @@
     <meta charset="utf-8" />
     <title>Login</title>
     <link rel="stylesheet" href="/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <h1>Login</h1>
-
-    <form action="/auth/login" method="POST">
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="text" name="password" /><br />
-      <br />
-      <input type="submit" value="Login" />
-    </form>
+      <div class="logInForm">
+        <form action="/auth/login" method="POST">
+          Username: <input type="text" name="username" /> <br />
+          <br />
+          Password: <input type="text" name="password" /><br />
+          <br />
+          <input type="submit" value="Login" />
+        </form>
+      </div>
   </body>
+    <button class="btn" onclick="document.location='/'"><i class="fa fa-home"></i></button>
 </html>
