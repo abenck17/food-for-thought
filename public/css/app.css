@@ -65,15 +65,46 @@ a {
 a:hover { 
   background-color: rgb(0, 77, 0);
   border: lightgray solid 1px; 
+  cursor: pointer;
 }
 
 .signUpForm {
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 65%;
   font-family: 'Amatic SC', cursive;
   font-size: 30px; 
   color: white;
+  border-style:outset;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.signUpForm form {
+  padding: 50px; 
+}
+
+/* .signUpForm form input {
+  background-color: red;
+} */
+
+.signUpButton {
+  position: absolute;
+  left: 40%;
+  bottom: 3%;
+  background-color: rgb(0, 51, 0);
+  color: white;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  border-radius: 2px;
+  height: 50px;
+  width: 70px;
+  transition: 1s;
+}
+
+.signUpButton:hover {
+  background-color: rgb(0, 77, 0);
+  border: lightgray solid 1px;
+  cursor: pointer;
 }
 
 .logInForm {
@@ -83,7 +114,14 @@ a:hover {
   font-family: 'Amatic SC', cursive;
   font-size: 50px; 
   color: white;
+  border-style:outset;
+  background-color: rgba(0,0,0,0.5);
 }
+
+.logInForm form {
+  padding: 50px; 
+}
+
 
 /* Style buttons */
 .btn {
@@ -101,6 +139,7 @@ a:hover {
 .btn:hover {
   background-color: rgb(0, 77, 0);
   border: lightgray solid 1px;
+  cursor: pointer;
 }
 
 

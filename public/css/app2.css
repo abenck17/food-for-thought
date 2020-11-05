@@ -46,6 +46,19 @@ body {
     margin-right: 20px;
     padding-right: 20px;
     opacity: 0.85;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .recipeLink {
+    font-weight: bold;
+    font-size: 25px;
+    color: bisque;
+    text-decoration: none;
+  }
+
+  .recipeLink:hover {
+    color: blue;
+    text-decoration: underline;
   }
 
   .singleRecipe {
@@ -56,15 +69,49 @@ body {
      
   }
 
-  .singleRecipe::before {
-    content: "";
+  .editRecipe {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.15);
-}
+    top: 30%;
+    left: 35%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px; 
+    color: white;
+    border-style:outset;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .editRecipe form {
+    padding: 50px; 
+  }
+
+  .editFormButton {
+    position: absolute;
+    left: 30%;
+    bottom: 3%;
+    background-color: rgb(0, 51, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Amatic SC', cursive;
+    border-radius: 2px;
+    height: 50px;
+    width: 110px;
+    transition: 1s;
+  }
+  
+  .editFormButton:hover {
+    background-color: rgb(0, 77, 0);
+    border: lightgray solid 1px;
+    cursor: pointer;
+  }
+
+  .newRecipe {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px; 
+    color: white;
+  }
 
   /* Style buttons */
 .btn {
@@ -76,10 +123,45 @@ body {
     cursor: pointer; /* Mouse pointer on hover */
     height: 8%;
     width: 4%;
+    opacity: 0.7;
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: rgb(0, 77, 0);
     border: lightgray solid 1px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.editButton {
+  margin-left: 10px; 
+  font-size: 10px;
+  border-radius: 2px;
+  height: 20px;
+  width: 40px;
+  transition: 0.5s;
+}
+
+.editButton:hover {
+  background-color: rgb(0, 51, 0);
+  color: white;
+  border: lightgray solid 1px;
+  cursor: pointer;
+}
+
+.editDeleteButton {
+  margin-left: 10px; 
+  font-size: 10px;
+  border-radius: 2px;
+  height: 20px;
+  width: 50px;
+  transition: 0.5s;
+}
+
+.editDeleteButton:hover {
+  background-color:red;
+  color: white;
+  border: lightgray solid 1px;
+  cursor: pointer;
 }

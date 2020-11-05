@@ -6,7 +6,7 @@ const User = require('../models').User;
 
 //index
 router.get("/", (req, res) => {
-  Recipe.findAll().then((recipes) => {
+  Recipe.findAll({order: [['name', 'ASC']]}).then((recipes) => {  // keep same syntax to order by // 
     res.render("index.ejs", {
       recipes: recipes,
     });

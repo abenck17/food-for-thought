@@ -3,21 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title>Edit recipes Page</title>
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/app2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <h1>Edit recipe Page</h1>
-        <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
-		<!--  NOTE: the form is pre-populated with values for the server-->
-		
-        Name: <input type="text" name="name" value="<%=recipe.name%>"/><br/>
-        Calorie: <input type="text" name="calorie" value="<%=recipe.calorie%>"/><br/>
-        Fat: <input type="number" name="fat" value="<%=recipe.fat%>"/><br/>
-        Carb: <input type="number" name="carb" value="<%=recipe.carb%>"/><br/>
-        Protein: <input type="number" name="protein" value="<%=recipe.protein%>"/><br/>
-        Link: <input type="url" name="link" value="<%=recipe.link%>"/><br/>
-		<br/>
-		<input type="submit" name="" value="Submit Changes"/>
-        </form>
+            <div class="editRecipe">
+                <form action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
+                <!--  NOTE: the form is pre-populated with values for the server-->
+                Name: <input type="text" name="name" value="<%=recipe.name%>"/><br/>
+                Calorie: <input type="text" name="calorie" value="<%=recipe.calorie%>"/><br/>
+                Fat: <input type="number" name="fat" value="<%=recipe.fat%>"/><br/>
+                Carb: <input type="number" name="carb" value="<%=recipe.carb%>"/><br/>
+                Protein: <input type="number" name="protein" value="<%=recipe.protein%>"/><br/>
+                Link: <input type="url" name="link" value="<%=recipe.link%>"/><br/>
+                <br/>
+                <input type="submit" name="" value="Submit Changes" class="editFormButton"/>
+                </form>
+            </div>
     </body>
+    <button class="btn" onclick="document.location='/'"><i class="fa fa-home"></i></button>
 </html>
