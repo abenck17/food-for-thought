@@ -26,12 +26,12 @@ h1 {
   /* grid-column: 2;
   grid-row: 2; */
   position: absolute;
-  font-size: 125px;
+  font-size: 145px;
   margin-top: 0px; 
   font-family: 'Amatic SC', cursive;
-  left: 50%;
+  left: 60%;
   color: slategray;
-  text-shadow: 2px 2px 0px white, 3px 3px 0px #707070;
+  text-shadow: 2px 2px 0px white, 4px 4px 0px black;
 }
 
 .headerCredentials {
@@ -83,9 +83,10 @@ a:hover {
   padding: 50px; 
 }
 
-/* .signUpForm form input {
-  background-color: red;
-} */
+.formInput {
+  font-size: 20px;
+  font-family: 'Kite One', sans-serif;
+}
 
 .signUpButton {
   position: absolute;
@@ -140,6 +141,16 @@ a:hover {
   background-color: rgb(0, 77, 0);
   border: lightgray solid 1px;
   cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: snow;
+  text-align: center;
 }
 
 

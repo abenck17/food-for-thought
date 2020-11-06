@@ -14,7 +14,7 @@
                 <% for(let i=0; i<recipes.length; i++) { %>
                     <li class="groupRecipe">
                         <nav class="singleRecipe">
-                            <a href="<%=recipes[i].link%>" class="recipeLink"><%=recipes[i].name%><br/></a>
+                            <a href="<%=recipes[i].link%>"  target="_blank" class="recipeLink"><%=recipes[i].name%><br/></a>
                             <a>Calorie (<%=recipes[i].calorie%>)<br/></a>
                             <a>Fat (<%=recipes[i].fat%>g)<br/></a>
                             <a>Carb (<%=recipes[i].carb%>g)<br/></a>
@@ -28,7 +28,7 @@
                     </br>
                         <!--  ADD DELETE FORM HERE-->
                         <form action="/recipes/<%=recipes[i].id %>?_method=DELETE" method="POST">
-                            <input type="submit" value="DELETE" class="editDeleteButton"/>
+                            <input type="submit" value="DELETE" class="editDeleteButton" onclick="return confirm('Are you sure you want to delete <%=recipes[i].name%>?')"/>
                         </form>
                     </br>
                     </li>

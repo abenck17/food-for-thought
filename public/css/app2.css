@@ -192,3 +192,8 @@ body {
   border: lightgray solid 1px;
   cursor: pointer;
 }
+
+.formInput {
+  font-size: 20px;
+  font-family: 'Kite One', sans-serif;
+}

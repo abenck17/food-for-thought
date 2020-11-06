@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="/css/app.css" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <h1>Login</h1>
       <div class="logInForm">
         <form action="/auth/login" method="POST">
-          Username: <input type="text" name="username" /> <br />
+          Username: <input type="text" name="username" class="formInput" /> <br />
           <br />
-          Password: <input type="text" name="password" /><br />
+          Password: <input type="password" name="password" class="formInput" /><br />
           <br />
           <input type="submit" value="Login" class="signUpButton"/>
         </form>

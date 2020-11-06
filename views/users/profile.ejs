@@ -13,27 +13,27 @@
     <h1><%=user.name%>'s Kitchen</h1>
       <div class="profileForm">
         <form action="/users/profile/<%=user.id%>?_method=PuT" method="POST">
-          Name: <input type="text" name="name" value="<%=user.name%>" /><br />
+          Name: <input type="text" name="name" value="<%=user.name%>" class="formInput" /><br />
           <br />
           Username:
-          <input type="text" name="username" value="<%=user.username%>" /><br />
+          <input type="text" name="username" value="<%=user.username%>" class="formInput" /><br />
           <br />
           Password:
-          <input type="text" name="password" value="<%=user.password%>" /><br />
+          <input type="text" name="password" value="<%=user.password%>" class="formInput" /><br />
           <br />
           Weight:
-          <input type="number" name="weight" value="<%=user.weight%>" /><br />
+          <input type="number" name="weight" value="<%=user.weight%>" class="formInput"/><br />
           <br />
           Age:
-          <input type="number" name="age" value="<%=user.age%>" /><br />
+          <input type="number" name="age" value="<%=user.age%>" class="formInput"/><br />
           <br />
           Goal:
-          <input type="text" name="goal" value="<%=user.goal%>" /><br />
+          <input type="text" name="goal" value="<%=user.goal%>" class="formInput"/><br />
           <br />
-          <input type="submit" value="Edit Profile" class="profileEditButton"/>
+          <input type="submit" value="Edit Profile" class="profileEditButton" onclick="return confirm('Are you sure you want to edit <%=user.name%>?')"/>
         </form>
         <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
-          <input type="submit" value="Delete user" class="deleteUser" />
+          <input type="submit" value="Delete user" class="deleteUser" onclick="return confirm('Are you sure you want to delete <%=user.name%>?')" />
         </form>
       </div>
 
@@ -42,7 +42,7 @@
     <% for (let i = 0; i < user.Recipes.length; i++){ %>
          <li class="groupRecipeList">
            <nav class="singleProfileRecipe">
-              <a href="<%=user.Recipes[i].link%>" class="recipeLink"><%=user.Recipes[i].name%><br/></a>
+              <a href="<%=user.Recipes[i].link%>" target="_blank" class="recipeLink"><%=user.Recipes[i].name%><br/></a>
               <a>Calorie (<%=user.Recipes[i].calorie%>)<br/></a>
               <a>Fat (<%=user.Recipes[i].fat%>g)<br/></a>
               <a>Carb (<%=user.Recipes[i].carb%>g)<br/></a>
