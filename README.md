@@ -1,6 +1,17 @@
-# food-for-thought
+# Food For Thought
 
-A community of individuals who want to make a change to their diet plan, or a macro tracking community, where users will be able to track their current macros based on their goals, and add recipes for other users to try. This will include a signUp/logIn page where their are this months popular recipes to try, along with user success stories from users who have enjoyed the foodForThought app! Then on the users profile page, the user will be able to add recipes, and track their current macros, based on wight loss or muscle gain. 
+Food For Thought was built for a community of individuals who want to make a change to their diet plan, or a macro tracking community, where users will be able to track the  macros of their favorite recipes based on their goals, and add recipes for other users to try. This will include a signUp/logIn page with encrypted passwords to keep the user safe, an All Recipes page that documents all of the recipes added by users, and a profile page to see your recipes and information.
+
+# Project Links
+
+[GitHub Repo](https://github.com/abenck17/food-for-thought)
+[Deployed Site via Heroku](https://food-for-thought-app.herokuapp.com/)
+
+# Gettin Started 
+
+[ERD](resources/FoodForThought_ERD.png)
+[Wireframe1](resources/FoodForThought_Wireframe1.png)
+[Wireframe2](resources/FoodForThought_Wireframe2.png)
 
 # MVP - Minimum Viable Product
 - A working full-stack application, built by you, using Node.js, Postgres, Express and EJS
