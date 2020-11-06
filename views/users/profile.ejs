@@ -2,49 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title><%=user.name%>'s Kitchen</title>
+    <link rel="stylesheet" href="/css/app3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <h1>welcome <%=user.name%></h1>
-    <form action="/users/profile/<%=user.id%>?_method=PuT" method="POST">
-      Name: <input type="text" name="name" value="<%=user.name%>" /><br />
-      <br />
-      Username:
-      <input type="text" name="username" value="<%=user.username%>" /><br />
-      <br />
-      Password:
-      <input type="text" name="password" value="<%=user.password%>" /><br />
-      <br />
-      Weight:
-      <input type="number" name="weight" value="<%=user.weight%>" /><br />
-      <br />
-      Age:
-      <input type="number" name="age" value="<%=user.age%>" /><br />
-      <br />
-      Goal:
-      <input type="text" name="goal" value="<%=user.goal%>" /><br />
-      <br />
-      <input type="submit" value="Edit Profile" />
-    </form>
-    <br />
-    <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete user" />
-    </form>
+    <h1><%=user.name%>'s Kitchen</h1>
+      <div class="profileForm">
+        <form action="/users/profile/<%=user.id%>?_method=PuT" method="POST">
+          Name: <input type="text" name="name" value="<%=user.name%>" /><br />
+          <br />
+          Username:
+          <input type="text" name="username" value="<%=user.username%>" /><br />
+          <br />
+          Password:
+          <input type="text" name="password" value="<%=user.password%>" /><br />
+          <br />
+          Weight:
+          <input type="number" name="weight" value="<%=user.weight%>" /><br />
+          <br />
+          Age:
+          <input type="number" name="age" value="<%=user.age%>" /><br />
+          <br />
+          Goal:
+          <input type="text" name="goal" value="<%=user.goal%>" /><br />
+          <br />
+          <input type="submit" value="Edit Profile" class="profileEditButton"/>
+        </form>
+        <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete user" class="deleteUser" />
+        </form>
+      </div>
 
-    <h3>Recipes added by you:</h3>
+    <h3>Recipes added by <%=user.name%>:</h3> <a href="/recipes/new"><button type="button" class="newRecipeProf">+</button></a>
+    <ul class="profileRecipeList">  
     <% for (let i = 0; i < user.Recipes.length; i++){ %>
-            <li>
-               <a href="/recipes/<%=user.Recipes[i].id%>"><%=user.Recipes[i].name%></a>
-            </li>
+         <li class="groupRecipeList">
+           <nav class="singleProfileRecipe">
+              <a href="<%=user.Recipes[i].link%>" class="recipeLink"><%=user.Recipes[i].name%><br/></a>
+              <a>Calorie (<%=user.Recipes[i].calorie%>)<br/></a>
+              <a>Fat (<%=user.Recipes[i].fat%>g)<br/></a>
+              <a>Carb (<%=user.Recipes[i].carb%>g)<br/></a>
+              <a>Protein (<%=user.Recipes[i].protein%>g)<br/></a>
+            </nav>
+          </li>
             <br>
-    <% } %>
-
-    <br><br>
-
-    <br /><br />
-    
-    <a href="/recipes"><button type="button">View all Recipes</button></a>
-    <a href="/recipes/new"><button type="button">Create New Recipe</button></a>
-    
+    <% } %>  
+  </ul>
   </body>
+  <button class="btn" onclick="document.location='/'"><i class="fa fa-home"></i></button>
 </html>

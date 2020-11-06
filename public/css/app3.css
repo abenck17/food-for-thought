@@ -1,0 +1,169 @@
+html {
+    height: 100%;
+    width: 100%; 
+    resize: both;
+    overflow: hidden;
+    scroll: none;
+}
+
+body {
+  background-image: url("https://cdn.shopify.com/s/files/1/0024/2810/8869/products/Subway_Tile_Replica_Surface_-_1_3_2048x.jpg?v=1586361100"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 100vw;
+  height: 100vh;
+  overflow:auto;
+  opacity: 0.9;
+}
+
+h1 {
+    position: absolute;
+    margin-top: 0px;
+    top: 3%;
+    left: 40%;
+    font-size: 160px;
+    font-family: 'Amatic SC', cursive;
+    color: darkslategray;
+    /* text-shadow: 2px 2px 0px bisque, 3px 3px 0px #707070; */
+  }
+
+h3 {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 50px;
+    font-family: 'Kite One', sans-serif;
+    color: darkslategray;
+    /* text-shadow: 2px 2px 0px bisque, 3px 3px 0px #707070; */
+}
+
+  .profileForm {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px; 
+    color: white;
+    border-style:outset;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .profileForm form {
+    padding: 50px; 
+  }
+
+  .deleteUser { 
+      position: absolute;
+      top: 80%;
+  }
+
+  .newRecipeProf {
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    background-color: rgb(0, 51, 0);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .newRecipeProf:hover {
+    background-color: rgb(0, 77, 0);
+  }
+
+  .profileEditButton {
+    margin-left: 10px; 
+    font-size: 15px;
+    border-radius: 2px;
+    height: 25px;
+    width: 85px;
+    transition: 0.5s;
+  }
+  
+  .profileEditButton:hover {
+    background-color: rgb(0, 51, 0);
+    color: white;
+    border: lightgray solid 1px;
+    cursor: pointer;
+  }
+
+  .deleteUser {
+    margin-left: 10px; 
+    font-size: 15px;
+    border-radius: 2px;
+    height: 25px;
+    width: 90px;
+    transition: 0.5s;
+  }
+  
+  .deleteUser:hover {
+    background-color:red;
+    color: white;
+    border: lightgray solid 1px;
+    cursor: pointer;
+  }
+
+  .profileRecipeList {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap; 
+    top: 40%;
+    left: 40%;
+    /* justify-content: space-between; */
+    list-style-type: none;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+
+  .groupRecipeList {
+    border-style: outset;
+    display: inline;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    opacity: 0.85;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .singleProfileRecipe {
+    color: snow;
+    font-size: 20px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+
+  .recipeLink {
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .recipeLink:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .btn {
+    background-color: rgb(0, 51, 0);; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    height: 8%;
+    width: 4%;
+    opacity: 0.7;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: rgb(0, 77, 0);
+    border: lightgray solid 1px;
+    opacity: 0.7;
+    cursor: pointer;
+}

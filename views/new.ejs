@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/app2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -11,15 +13,16 @@
     <!--  NOTE: action will be the route, method will be the HTTP verb-->
     <div class="newRecipe">
         <form action="/recipes" method="POST">
-            User Id: <input type="text" name="userId"/><br/>
+            User Id: <input type="text" name="userId"/><br/> <!--Ask Suresh how to prefill this with userId tomorrow?-->
             Name: <input type="text" name="name"/><br/>
             Calorie: <input type="text" name="calorie"/><br/>
             Fat: <input type="text" name="fat"/><br/>
             Carb: <input type="text" name="carb"/><br/>
             Protein: <input type="text" name="protein"/><br/>
             Link: <input type="url" name="link"/><br/>
-          <input type="submit" name="" value="Create recipe" />
+          <input type="submit" name="" value="Create recipe" class="newFormButton"/>
         </form>
     </div>
   </body>
+  <button class="btn" onclick="document.location='/'"><i class="fa fa-home"></i></button>
 </html>
