@@ -12,7 +12,7 @@ Food For Thought was built for a community of individuals who want to make a cha
 - [ERD](resources/FoodForThought_ERD.png)
 - [Wireframe1](resources/FoodForThought_Wireframe1.png)
 - [Wireframe2](resources/FoodForThought_Wireframe2.png)
-- [UserStories](resources/User Stories.docx)
+- [UserStories](resources/User_Stories.docx)
 
 # MVP - Minimum Viable Product
 - A working full-stack application, built by you, using Node.js, Postgres, Express and EJS
