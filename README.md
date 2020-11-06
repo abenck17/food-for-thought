@@ -27,3 +27,22 @@ Food For Thought was built for a community of individuals who want to make a cha
 - Include at least 10 User Stories
 - Include wireframes that you designed during the planning process
 - Have a link to your hosted working app in the README.md file in your github repo
+
+# Technology Used
+
+- **Command Line:** used to interact with computer, to create and move files used with hangman-abenck17.github.io
+- **Visual Studio Code:** used to build code with HTML, CSS, and JavaScript
+- **Google Chrome:** used for launching website, and researching tips and tricks for Hangman project
+- **Google Chrome Dev Tools:** used to debug code when running into problems, and to help visualize where code would show up in browser
+- **Heroku:** used for deployment
+- **CodePen:** used to sample code segments, and test different sceneraios on code
+- **W3schools:** useful website that helped with styling my app
+
+# Issues / Missed opertunities
+
+- Understand which user is creating a new recipe and pre-populate the userId field
+- Remember a user and be able to access the user's profile once logged, without requiring to log in again
+- Create a filter on the All Recipes page to filter by favorite, date created, name, calorie, fat, carb, or protein
+- Show the password on the user profile without the hash encrypt, allowing the user to edit the password
+
+Need to add information here on what I had planned to, but couldn't due to time constraints
