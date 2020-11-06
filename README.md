@@ -38,8 +38,8 @@ Food For Thought was built for a community of individuals who want to make a cha
 - **Heroku:** used for deployment
 - **CodePen:** used to sample code segments, and test different sceneraios on code
 - **W3schools:** useful website that helped with styling my app
-- **Node.js:**
-- **Express:**
+- **Node.js:** framework that works on top of node
+- **Express:** javascript run time environment that works well with express
 
 # Issues / Missed opertunities
 
