@@ -4,14 +4,14 @@ Food For Thought was built for a community of individuals who want to make a cha
 
 # Project Links
 
-[GitHub Repo](https://github.com/abenck17/food-for-thought)
-[Deployed Site via Heroku](https://food-for-thought-app.herokuapp.com/)
+- [GitHub Repo](https://github.com/abenck17/food-for-thought)
+- [Deployed Site via Heroku](https://food-for-thought-app.herokuapp.com/)
 
 # Gettin Started 
 
-[ERD](resources/FoodForThought_ERD.png)
-[Wireframe1](resources/FoodForThought_Wireframe1.png)
-[Wireframe2](resources/FoodForThought_Wireframe2.png)
+- [ERD](resources/FoodForThought_ERD.png)
+- [Wireframe1](resources/FoodForThought_Wireframe1.png)
+- [Wireframe2](resources/FoodForThought_Wireframe2.png)
 
 # MVP - Minimum Viable Product
 - A working full-stack application, built by you, using Node.js, Postgres, Express and EJS
