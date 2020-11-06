@@ -44,5 +44,7 @@ Food For Thought was built for a community of individuals who want to make a cha
 - Remember a user and be able to access the user's profile once logged, without requiring to log in again
 - Create a filter on the All Recipes page to filter by favorite, date created, name, calorie, fat, carb, or protein
 - Show the password on the user profile without the hash encrypt, allowing the user to edit the password
+- Ran into problems with my deployed Heroku sight
+  - Getting timeout errors, explained as requests taking longer than 30 seconds 
+  - Decided to present locally
 
-Need to add information here on what I had planned to, but couldn't due to time constraints
